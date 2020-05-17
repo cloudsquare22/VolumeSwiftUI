@@ -13,10 +13,11 @@
 		8DC6D41124700EC6008F79D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41024700EC6008F79D1 /* Assets.xcassets */; };
 		8DC6D41424700EC6008F79D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41324700EC6008F79D1 /* Preview Assets.xcassets */; };
 		8DC6D41724700EC6008F79D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41524700EC6008F79D1 /* LaunchScreen.storyboard */; };
+		8DC6D41F247019D7008F79D1 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6D41E247019D7008F79D1 /* MusicData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8DC6D40724700EC5008F79D1 /* VolumeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC6D40724700EC5008F79D1 /* Volume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC6D40A24700EC5008F79D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DC6D40C24700EC5008F79D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8DC6D40E24700EC5008F79D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +25,7 @@
 		8DC6D41324700EC6008F79D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DC6D41624700EC6008F79D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC6D41824700EC6008F79D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC6D41E247019D7008F79D1 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,7 @@
 		8DC6D40824700EC5008F79D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC6D40724700EC5008F79D1 /* VolumeSwiftUI.app */,
+				8DC6D40724700EC5008F79D1 /* Volume.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +65,7 @@
 				8DC6D41524700EC6008F79D1 /* LaunchScreen.storyboard */,
 				8DC6D41824700EC6008F79D1 /* Info.plist */,
 				8DC6D41224700EC6008F79D1 /* Preview Content */,
+				8DC6D41E247019D7008F79D1 /* MusicData.swift */,
 			);
 			path = VolumeSwiftUI;
 			sourceTree = "<group>";
@@ -92,7 +95,7 @@
 			);
 			name = VolumeSwiftUI;
 			productName = VolumeSwiftUI;
-			productReference = 8DC6D40724700EC5008F79D1 /* VolumeSwiftUI.app */;
+			productReference = 8DC6D40724700EC5008F79D1 /* Volume.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC6D40B24700EC5008F79D1 /* AppDelegate.swift in Sources */,
+				8DC6D41F247019D7008F79D1 /* MusicData.swift in Sources */,
 				8DC6D40D24700EC5008F79D1 /* SceneDelegate.swift in Sources */,
 				8DC6D40F24700EC5008F79D1 /* ContentView.swift in Sources */,
 			);
@@ -294,7 +298,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.cloudsquare.ios.musuic.VolumeSwiftUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Volume;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,7 +318,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.cloudsquare.ios.musuic.VolumeSwiftUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Volume;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
