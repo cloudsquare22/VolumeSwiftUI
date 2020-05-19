@@ -25,9 +25,9 @@ struct UIKitMPVolumeView: UIViewRepresentable {
     func getVolume() -> Float {
         var volume: Float = 0.0
         for subview in view.subviews {
-            if let lalala = subview as? UISlider {
-                print(lalala.value)
-                volume = lalala.value
+            if let uislider = subview as? UISlider {
+                print(uislider.value)
+                volume = uislider.value
             }
         }
         return volume
