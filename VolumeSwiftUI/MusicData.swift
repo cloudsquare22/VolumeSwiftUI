@@ -10,18 +10,17 @@ import SwiftUI
 import MediaPlayer
 
 final class MusicData: ObservableObject {
-    @Published var volume: Double
     @Published var albumName = "-"
     @Published var artistName = "-"
     @Published var persistentid = "-"
-    @Published var albumVolume: Double = 0
+    @Published var albumVolume: Float = 0
 
     var player: MPMusicPlayerController! = MPMusicPlayerController.systemMusicPlayer
     let userDefaults = UserDefaults.standard
 
+    let volumeView = UIKitMPVolumeView()
+
     init() {
-        volume = Double(AVAudioSession.sharedInstance().outputVolume)
-        print("nowVolume:\(volume)")
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(MusicData.changeMusic(_:)), name: NSNotification.Name.MPMusicPlayerControllerNowPlayingItemDidChange, object: player)
         player.beginGeneratingPlaybackNotifications()
@@ -35,15 +34,11 @@ final class MusicData: ObservableObject {
         loadVolume()
     }
     
-    func getVolume() {
-        print(#function)
-        volume = Double(AVAudioSession.sharedInstance().outputVolume)
-        print("nowVolume:\(volume)")
-    }
-    
     func setSystemVolume() {
         print(#function)
-        player.setValue(Float(volume), forKey: "volume")
+        if albumVolume != 0 {
+            player.setValue(albumVolume, forKey: "volume")
+        }
     }
     
     func setNowPlaying() {
@@ -70,17 +65,17 @@ final class MusicData: ObservableObject {
     func saveVolume() {
         print(#function)
         if persistentid != "-" {
-            let saveVolume : Float = Float(volume)
+            let saveVolume : Float = volumeView.getVolume()
             userDefaults.set(saveVolume, forKey: persistentid)
-            print("save volume:\(persistentid):\(volume)")
-            albumVolume = Double(saveVolume)
+            print("save volume:\(persistentid):\(saveVolume)")
+            albumVolume = saveVolume
         }
     }
     
     func loadVolume() {
         print(#function)
         if persistentid != "-" {
-            albumVolume = Double(userDefaults.float(forKey: persistentid))
+            albumVolume = userDefaults.float(forKey: persistentid)
         }
         print("load volume:\(albumVolume)")
     }
@@ -88,7 +83,6 @@ final class MusicData: ObservableObject {
     func setVolume() {
         print(#function)
         if albumVolume != 0 {
-            volume = albumVolume
             setSystemVolume()
         }
     }

@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var musicData: MusicData
 
+    let width = UIScreen.main.bounds.width
+
     var body: some View {
         ZStack {
             Color("jccolor")
@@ -48,14 +50,8 @@ struct ContentView: View {
                     Spacer()
                 }
                 .padding(8.0)
-                Text(String(format: "%.2f", musicData.volume))
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .padding(8.0)
-                Slider(value: $musicData.volume, in: 0.01...1.00, step: 0.01, onEditingChanged: {_ in
-                    self.musicData.setSystemVolume()
-                })
-                    .padding(8.0)
+                musicData.volumeView
+                    .frame(width: width * 0.9, height: 50, alignment: .center)
                 Text(musicData.albumName)
                     .foregroundColor(.white)
                     .padding(8.0)

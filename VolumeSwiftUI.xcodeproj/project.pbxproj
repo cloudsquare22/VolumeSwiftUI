@@ -14,6 +14,7 @@
 		8DC6D41424700EC6008F79D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41324700EC6008F79D1 /* Preview Assets.xcassets */; };
 		8DC6D41724700EC6008F79D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41524700EC6008F79D1 /* LaunchScreen.storyboard */; };
 		8DC6D41F247019D7008F79D1 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6D41E247019D7008F79D1 /* MusicData.swift */; };
+		8DFB765A247406BD002E7494 /* UIKitMPVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB7659247406BD002E7494 /* UIKitMPVolumeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8DC6D41624700EC6008F79D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC6D41824700EC6008F79D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC6D41E247019D7008F79D1 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
+		8DFB7659247406BD002E7494 /* UIKitMPVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMPVolumeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8DC6D41824700EC6008F79D1 /* Info.plist */,
 				8DC6D41224700EC6008F79D1 /* Preview Content */,
 				8DC6D41E247019D7008F79D1 /* MusicData.swift */,
+				8DFB7659247406BD002E7494 /* UIKitMPVolumeView.swift */,
 			);
 			path = VolumeSwiftUI;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFB765A247406BD002E7494 /* UIKitMPVolumeView.swift in Sources */,
 				8DC6D40B24700EC5008F79D1 /* AppDelegate.swift in Sources */,
 				8DC6D41F247019D7008F79D1 /* MusicData.swift in Sources */,
 				8DC6D40D24700EC5008F79D1 /* SceneDelegate.swift in Sources */,
