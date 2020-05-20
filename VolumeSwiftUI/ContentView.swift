@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var musicData: MusicData
+    
+    @State var volume: Float = 0.5
 
     let width = UIScreen.main.bounds.width
 
@@ -36,21 +38,52 @@ struct ContentView: View {
                         self.musicData.setVolume()
                     }) {
                         Text("Set")
+                            .font(.largeTitle)
                     }
                     Image(systemName: "arrow.down")
+                        .font(.largeTitle)
                         .foregroundColor(.white)
                     Spacer()
                     Image(systemName: "arrow.up")
+                        .font(.largeTitle)
                         .foregroundColor(.white)
                     Button(action: {
                         self.musicData.saveVolume()
                     }) {
                         Text("Save")
+                            .font(.largeTitle)
                     }
                     Spacer()
                 }
                 .padding(8.0)
-                musicData.volumeView
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        self.volume = self.volume - 0.01
+                        self.musicData.setSystemVolume(volume: self.volume)
+                    }) {
+                        Text("-0.01")
+                            .font(.largeTitle)
+                            .padding(8.0)
+                    }
+                    Spacer()
+                    Text(String(format: "%.2f", volume))
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .padding(8.0)
+                    Spacer()
+                    Button(action: {
+                        self.volume = self.volume + 0.01
+                        self.musicData.setSystemVolume(volume: self.volume)
+                    }) {
+                        Text("+0.01")
+                            .font(.largeTitle)
+                            .padding(8.0)
+                    }
+                    Spacer()
+                }
+                makeUIKitMPVolumeView()
+//                musicData.volumeView
                     .frame(width: width * 0.9, height: 50, alignment: .center)
                 Text(musicData.albumName)
                     .foregroundColor(.white)
@@ -63,6 +96,11 @@ struct ContentView: View {
                     .padding(8.0)
             }
         }
+    }
+    
+    func makeUIKitMPVolumeView() -> UIKitMPVolumeView {
+        musicData.volumeView = UIKitMPVolumeView(volume: $volume)
+        return musicData.volumeView!
     }
 }
 

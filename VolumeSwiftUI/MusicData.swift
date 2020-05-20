@@ -18,7 +18,7 @@ final class MusicData: ObservableObject {
     var player: MPMusicPlayerController! = MPMusicPlayerController.systemMusicPlayer
     let userDefaults = UserDefaults.standard
 
-    let volumeView = UIKitMPVolumeView()
+    var volumeView: UIKitMPVolumeView? = nil
 
     init() {
         let notificationCenter = NotificationCenter.default
@@ -40,7 +40,12 @@ final class MusicData: ObservableObject {
             player.setValue(albumVolume, forKey: "volume")
         }
     }
-    
+
+    func setSystemVolume(volume: Float) {
+        print(#function)
+        player.setValue(volume, forKey: "volume")
+    }
+
     func setNowPlaying() {
         print(#function)
         albumName = "-"
@@ -65,10 +70,12 @@ final class MusicData: ObservableObject {
     func saveVolume() {
         print(#function)
         if persistentid != "-" {
-            let saveVolume : Float = volumeView.getVolume()
-            userDefaults.set(saveVolume, forKey: persistentid)
-            print("save volume:\(persistentid):\(saveVolume)")
-            albumVolume = saveVolume
+            if let vv = volumeView {
+                let saveVolume = vv.getVolume()
+                userDefaults.set(saveVolume, forKey: persistentid)
+                print("save volume:\(persistentid):\(saveVolume)")
+                albumVolume = saveVolume
+            }
         }
     }
     
