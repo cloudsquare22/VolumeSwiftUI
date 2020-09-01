@@ -60,6 +60,9 @@ struct ContentView: View {
                     Spacer()
                     Button(action: {
                         self.volume = self.volume - 0.01
+                        if self.volume < 0.00 {
+                            self.volume = 0.00
+                        }
                         self.musicData.setSystemVolume(volume: self.volume)
                     }) {
                         Text("-0.01")
@@ -74,6 +77,9 @@ struct ContentView: View {
                     Spacer()
                     Button(action: {
                         self.volume = self.volume + 0.01
+                        if 1.00 < self.volume {
+                            self.volume = 1.00
+                        }
                         self.musicData.setSystemVolume(volume: self.volume)
                     }) {
                         Text("+0.01")
