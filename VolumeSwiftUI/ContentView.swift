@@ -21,7 +21,7 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 if musicData.albumVolume != 0 {
-                    Text(String(format: "%.2f", musicData.albumVolume))
+                    Text(String(format: "Save data : %.2f", musicData.albumVolume))
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .padding(8.0)
@@ -92,11 +92,11 @@ struct ContentView: View {
 //                musicData.volumeView
                     .frame(width: width * 0.9, height: 50, alignment: .center)
                 Text(musicData.albumName)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.white)
-                    .padding(8.0)
                 Text(musicData.artistName)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.white)
-                    .padding(8.0)
                 Text(musicData.persistentid)
                     .foregroundColor(.white)
                     .padding(8.0)
