@@ -20,7 +20,7 @@ struct UIKitMPVolumeView: UIViewRepresentable {
         view.setVolumeThumbImage(UIImage(named: "volume"), for: .normal)
 
         if let uislider = getUISlider() {
-            volume = uislider.value
+//            volume = uislider.value
             uislider.addTarget(context.coordinator,
                                action: #selector(Coordinator.updateVolume(sender:)),
                                for: .valueChanged)
