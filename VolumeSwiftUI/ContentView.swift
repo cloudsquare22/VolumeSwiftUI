@@ -37,14 +37,14 @@ struct ContentView: View {
                     Button(action: {
                         self.musicData.setVolume()
                     }) {
-                        Text("Set")
+                        Text("Load")
                             .font(.largeTitle)
                     }
-                    Image(systemName: "arrow.down")
+                    Image(systemName: "arrow.turn.right.down")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                     Spacer()
-                    Image(systemName: "arrow.up")
+                    Image(systemName: "arrow.turn.left.up")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                     Button(action: {
