@@ -39,20 +39,20 @@ struct ContentView: View {
                     }) {
                         Text("Load")
                             .font(.largeTitle)
+                        Image(systemName: "arrow.turn.right.down")
+                            .font(.largeTitle)
                     }
-                    Image(systemName: "arrow.turn.right.down")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
+                    .buttonStyle(.borderedProminent)
                     Spacer()
-                    Image(systemName: "arrow.turn.left.up")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
                     Button(action: {
                         self.musicData.saveVolume()
                     }) {
+                        Image(systemName: "arrow.turn.left.up")
+                            .font(.largeTitle)
                         Text("Save")
                             .font(.largeTitle)
                     }
+                    .buttonStyle(.borderedProminent)
                     Spacer()
                 }
                 .padding(8.0)
@@ -94,6 +94,7 @@ struct ContentView: View {
                 Text(musicData.albumName)
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.white)
+                    .padding(EdgeInsets(top: 4.0, leading: 8.0, bottom: 4.0, trailing: 8.0))
                 Text(musicData.artistName)
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.white)
