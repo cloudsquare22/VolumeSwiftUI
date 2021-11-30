@@ -88,6 +88,7 @@ struct ContentView: View {
                     }
                     Spacer()
                 }
+                .padding(EdgeInsets(top: 4.0, leading: 0.0, bottom: 4.0, trailing: 0.0))
                 makeUIKitMPVolumeView()
 //                musicData.volumeView
                     .frame(width: width * 0.9, height: 50, alignment: .center)
