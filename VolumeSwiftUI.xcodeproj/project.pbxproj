@@ -7,26 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DC6D40B24700EC5008F79D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6D40A24700EC5008F79D1 /* AppDelegate.swift */; };
-		8DC6D40D24700EC5008F79D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6D40C24700EC5008F79D1 /* SceneDelegate.swift */; };
 		8DC6D40F24700EC5008F79D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6D40E24700EC5008F79D1 /* ContentView.swift */; };
 		8DC6D41124700EC6008F79D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41024700EC6008F79D1 /* Assets.xcassets */; };
 		8DC6D41424700EC6008F79D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41324700EC6008F79D1 /* Preview Assets.xcassets */; };
 		8DC6D41724700EC6008F79D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC6D41524700EC6008F79D1 /* LaunchScreen.storyboard */; };
 		8DC6D41F247019D7008F79D1 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6D41E247019D7008F79D1 /* MusicData.swift */; };
+		8DD12D8A278C51A100CAF627 /* VolumeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD12D89278C51A100CAF627 /* VolumeSwiftUIApp.swift */; };
 		8DFB765A247406BD002E7494 /* UIKitMPVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB7659247406BD002E7494 /* UIKitMPVolumeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8DC6D40724700EC5008F79D1 /* Volume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volume.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DC6D40A24700EC5008F79D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8DC6D40C24700EC5008F79D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8DC6D40E24700EC5008F79D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8DC6D41024700EC6008F79D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DC6D41324700EC6008F79D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DC6D41624700EC6008F79D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC6D41824700EC6008F79D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC6D41E247019D7008F79D1 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
+		8DD12D89278C51A100CAF627 /* VolumeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSwiftUIApp.swift; sourceTree = "<group>"; };
 		8DFB7659247406BD002E7494 /* UIKitMPVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitMPVolumeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,8 +58,6 @@
 		8DC6D40924700EC5008F79D1 /* VolumeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				8DC6D40A24700EC5008F79D1 /* AppDelegate.swift */,
-				8DC6D40C24700EC5008F79D1 /* SceneDelegate.swift */,
 				8DC6D40E24700EC5008F79D1 /* ContentView.swift */,
 				8DC6D41024700EC6008F79D1 /* Assets.xcassets */,
 				8DC6D41524700EC6008F79D1 /* LaunchScreen.storyboard */,
@@ -69,6 +65,7 @@
 				8DC6D41224700EC6008F79D1 /* Preview Content */,
 				8DC6D41E247019D7008F79D1 /* MusicData.swift */,
 				8DFB7659247406BD002E7494 /* UIKitMPVolumeView.swift */,
+				8DD12D89278C51A100CAF627 /* VolumeSwiftUIApp.swift */,
 			);
 			path = VolumeSwiftUI;
 			sourceTree = "<group>";
@@ -153,10 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DFB765A247406BD002E7494 /* UIKitMPVolumeView.swift in Sources */,
-				8DC6D40B24700EC5008F79D1 /* AppDelegate.swift in Sources */,
 				8DC6D41F247019D7008F79D1 /* MusicData.swift in Sources */,
-				8DC6D40D24700EC5008F79D1 /* SceneDelegate.swift in Sources */,
 				8DC6D40F24700EC5008F79D1 /* ContentView.swift in Sources */,
+				8DD12D8A278C51A100CAF627 /* VolumeSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

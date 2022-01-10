@@ -22,14 +22,12 @@ final class MusicData: ObservableObject {
 
     init() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(MusicData.changeMusic(_:)), name: NSNotification.Name.MPMusicPlayerControllerNowPlayingItemDidChange, object: player)
+        notificationCenter.addObserver(forName: .MPMusicPlayerControllerNowPlayingItemDidChange, object: self.player, queue: nil, using: { notification in
+            print("change item")
+            self.setNowPlaying()
+            self.loadVolume()
+        })
         player.beginGeneratingPlaybackNotifications()
-        setNowPlaying()
-        loadVolume()
-    }
-
-    @objc func changeMusic(_ notification:Notification?) {
-        print(#function)
         setNowPlaying()
         loadVolume()
     }
