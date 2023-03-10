@@ -68,7 +68,7 @@ struct ContentView: View {
                         }
                         self.musicData.setSystemVolume(volume: self.volume)
                     }) {
-                        Text("-0.01")
+                        Image(systemName: "speaker.minus")
                             .font(.largeTitle)
                             .padding(8.0)
                     }
@@ -85,7 +85,7 @@ struct ContentView: View {
                         }
                         self.musicData.setSystemVolume(volume: self.volume)
                     }) {
-                        Text("+0.01")
+                        Image(systemName: "speaker.plus")
                             .font(.largeTitle)
                             .padding(8.0)
                     }
