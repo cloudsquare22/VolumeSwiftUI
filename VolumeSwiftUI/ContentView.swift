@@ -126,19 +126,20 @@ struct ContentView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .background(Color("jccolor"))
-        .onChange(of: scenePhase, perform: { value in
-               switch(value) {
-               case .active:
-                   print("active")
-                   self.musicData.loadVolume()
-               case .background:
-                   print("background")
-               case .inactive:
-                   print("inactive")
-               @unknown default:
-                   print("default")
-               }
-           })
+        .onChange(of: scenePhase, { oldvalue, newvalue in
+            switch(newvalue) {
+            case .active:
+                print("active")
+                self.musicData.loadVolume()
+            case .background:
+                print("background")
+            case .inactive:
+                print("inactive")
+            @unknown default:
+                print("default")
+            }
+
+        })
     }
     
     func makeUIKitMPVolumeView() -> UIKitMPVolumeView {
